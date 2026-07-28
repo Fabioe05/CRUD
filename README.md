@@ -1,4 +1,4 @@
-n# C.R.U.D de Cursos
+## C.R.U.D de Cursos
 
 Este proyecto consiste en la elaboracion de un C.R.U.D (Create, Read, Update, Delete) de cursos, desarrollado utilizando *Node.js* y *Express*.
 
@@ -36,11 +36,15 @@ Este enrutador maneja las operaciones CRUD para la categori­a de programacian. 
 
 ### API de Matematicas (/api/cursos/matematicas)
 
-Este enrutador maneja las consultas para la categori­a de matematicas.
+Este enrutador maneja las consultas para la categori­a de matematicas. Utiliza el middleware express.json() para procesar los cuerpos de las solicitudes en formato JSON.
 
 *   *GET /*: Devuelve todos los cursos de matematicas.
 *   *GET /:tema*: Devuelve los cursos que coincidan con un tema especi­fico. Si no hay coincidencias, retorna un estado 404.
 *   *GET /:tema/:nivel*: Devuelve los cursos que coincidan con el tema y el nivel especificados. Si no hay coincidencias, retorna un estado 404.
+*   *POST /*: Agrega un nuevo curso al arreglo de programacian enviando un objeto JSON en el cuerpo de la solicitud (req.body).
+*   *PUT /:id*: Actualiza un curso existente por completo, buscandolo por su id. Se debe enviar el objeto actualizado en req.body.
+*   *PATCH /:id*: Actualiza propiedades especi­ficas de un curso existente, buscandolo por su id. Modifica solo los campos enviados en req.body.
+*   *DELETE /:id*: Elimina un curso del arreglo, buscandolo por su id.
 
 ## 👨‍💻 Autor
 
